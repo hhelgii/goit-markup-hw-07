@@ -1,5 +1,167 @@
-@media screen and (min-width: 768px) {
-    .container {
-        width: 768px;
-    }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.container {
+		width: 768px;
+	}
+	header {
+		position: relative;
+	}
+	.open-menu-btn {
+		display: none;
+	}
+	.header-nav-list {
+		display: flex;
+		gap: 40px;
+	}
+	.logo {
+		margin-right: 123px;
+	}
+	.header-contacts-list {
+		display: block;
+		/* margin-left: auto; */
+		position: absolute;
+		top: 24px;
+		right: 15px;
+	}
+	.header-contacts-list:first-child {
+		margin-bottom: 4px;
+	}
+	.navigation-link {
+		font-weight: 700;
+		line-height: var(--standart-line-height);
+		letter-spacing: var(--standart-letter-spacing);
+		color: inherit;
+		position: relative;
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	.navigation-link.current::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		border-radius: 2px;
+		background-color: var(--primary-brand-color);
+		left: 0;
+		bottom: -28px;
+	}
+	.contacts-link {
+		font-size: 12px;
+		line-height: 1.33;
+		line-height: var(--standart-line-height);
+		letter-spacing: var(--standart-letter-spacing);
+		color: var(--text-color);
+		transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	.contacts-link:hover,
+	.contacts-link:focus {
+		color: #404bbf;
+	}
+	.mobile-menu {
+		display: none;
+	}
+	.main-section {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/main-bg-1-tab.jpg);
+		padding: 112px 0 108px;
+		max-width: 768px;
+		height: 436px;
+	}
+	@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+		.main-section {
+			background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+				url(../images/main-bg-1-tab-2x.jpg);
+		}
+	}
+	.main-title {
+		font-size: 56px;
+		line-height: 1.07;
+		width: 496px;
+		margin: 0 auto 40px;
+	}
+	.order-button {
+		font-size: inherit;
+		line-height: 1.18;
+	}
+	.benefits-list {
+		display: flex;
+		gap: 24px;
+		flex-wrap: wrap;
+		row-gap: 72px;
+	}
+	.benefit-item {
+		width: calc((100% - 24px) / 2);
+	}
+	.caption {
+		text-align: left;
+	}
+
+	.team-section > .container {
+		width: 582px;
+	}
+	.members-list {
+		gap: 24px;
+		row-gap: 64px;
+	}
+
+	.customers-item {
+		width: calc((100% - 48px) / 3);
+	}
+	.customer-section > .container {
+		width: 582px;
+	}
+	.footer-section > .container {
+		width: 582px;
+	}
+	footer > .container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+		row-gap: 72px;
+	}
+
+	.footer-soc-title,
+	.footer-subscribe-lable {
+		text-align: left;
+	}
+	.footer-logo-wrap,
+	.footer-soc-wrap {
+		margin: unset;
+	}
+	.footer-form {
+		display: block;
+	}
+	.form-wrap {
+		justify-content: unset;
+		margin-top: 16px;
+	}
+	.footer-input {
+		width: 264px;
+	}
+	.footer-logo-wrap > .logo {
+		justify-content: unset;
+	}
+	.modal-windov {
+		width: 408px;
+	}
+	/* PORTFOLIO */
+
+	.section-portfolio {
+		/* desktop */
+		padding-top: 64px;
+		padding-bottom: 96px;
+	}
+	.buttons-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 24px;
+		/* desktop */
+		justify-content: center;
+		margin-bottom: 64px;
+	}
+	.service-item {
+		/* desktop */
+		width: calc((100% - 24px) / 2);
+	}
+	.service-list {
+		column-gap: 24px;
+		row-gap: 72px;
+	}
 }

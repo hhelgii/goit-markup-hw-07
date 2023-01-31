@@ -66,11 +66,6 @@ footer {
 	padding: 96px 0;
 }
 
-.section-portfolio {
-	padding-top: 96px;
-	padding-bottom: 120px;
-}
-
 .list {
 	list-style: none;
 }
@@ -197,6 +192,12 @@ header > .container {
 	height: 100vh;
 	background-color: #fff;
 	padding: 40px 0;
+
+	transform: translateX(100%);
+	transition: transform 250ms ease-in-out;
+}
+.mobile-menu.is-open {
+	transform: translateX(0);
 }
 .mob-menu-top {
 	margin-bottom: 64px;
@@ -206,6 +207,7 @@ header > .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	overflow: auto;
 }
 .close-menu-btn {
 	margin-bottom: 16px;
@@ -300,7 +302,7 @@ header > .container {
 	height: 600px; */
 
 	padding: 112px 0;
-	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/main-bg-1.jpg);
+	background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/main-bg-1-mob.jpg);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -308,7 +310,11 @@ header > .container {
 	height: 432px;
 	margin: 0 auto;
 }
-
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+	.main-section {
+		background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/main-bg-1-mob-2x.jpg);
+	}
+}
 .main-title {
 	/* desktop */
 
@@ -320,9 +326,9 @@ header > .container {
 	letter-spacing: var(--standart-letter-spacing);
 	color: #fff;
 	display: block;
-	font-size: 36px;
+	font-size: 32px;
 	line-height: 1.11;
-	width: 319px;
+	width: 300px;
 	margin: 0 auto 72px;
 }
 
@@ -434,7 +440,7 @@ header > .container {
 	
 } */
 .team-section > .container {
-	width: 264px;
+	width: 294px;
 }
 .members-list {
 	display: flex;
@@ -552,18 +558,16 @@ footer > .container {
 	padding: 96px 0;
 }
 
-.footer-logo-wrap {
+.footer-logo-wrap,
+.footer-soc-wrap {
 	/* desktop */
 	/* margin-right: 120px; */
 	margin: 0 auto;
 }
-
-.footer-soc-wrap {
-	/* desktop */
-	/* margin-right: 80px; */
-	margin: 0 auto;
+.footer-logo-wrap > .logo {
+	display: flex;
+	justify-content: center;
 }
-
 .after-logo-description {
 	margin-top: 16px;
 	display: block;
@@ -699,7 +703,7 @@ footer > .container {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scaleY(1);
-	width: 408px;
+	width: calc(100% - 30px);
 	min-height: 576px;
 	background: #fcfcfc;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -880,13 +884,23 @@ footer > .container {
 }
 
 /* PORTFOLIO */
+.section-portfolio {
+	/* desktop */
+	/* padding-top: 96px;
+	padding-bottom: 120px; */
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
 
 .buttons-list {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 24px;
-	justify-content: center;
-
-	margin-bottom: 72px;
+	/* desktop */
+	/* justify-content: center; */
+	/* margin-bottom: 72px; */
+	justify-content: start;
+	margin-bottom: 48px;
 }
 
 .filter-button {
@@ -907,12 +921,14 @@ footer > .container {
 .service-list {
 	display: flex;
 	flex-wrap: wrap;
-	column-gap: 24px;
+	/* column-gap: 24px; */
 	row-gap: 48px;
 }
 
 .service-item {
-	width: calc((100% - 48) / 3);
+	/* desktop */
+	/* width: calc((100% - 48) / 3); */
+	width: 100%;
 	box-shadow: 1px 1px 1px rgba(46, 47, 66, 0.08);
 }
 .service-wrap {

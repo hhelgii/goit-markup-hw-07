@@ -46,16 +46,16 @@
 						<a class="contacts-link link" href="tel:+110001111111">+11 (000) 111-11-11</a>
 					</li>
 				</ul>
-				<button type="button" class="open-menu-btn">
+				<button type="button" class="open-menu-btn js-open-menu">
 					<svg class="hamburger-icon" width="32" height="22">
 						<use href="./images/icons-optimized.svg#icon-hamburger"></use>
 					</svg>
 				</button>
 			</div>
-			<div class="mobile-menu">
+			<div class="mobile-menu js-menu-container">
 				<div class="container">
 					<div class="mob-menu-top">
-						<button type="button" class="close-menu-btn">
+						<button type="button" class="close-menu-btn js-close-menu">
 							<svg class="close-icon" width="8" heigh="8">
 								<use href="./images/icons-optimized.svg#icon-close-black-18dp-2-1-1"></use>
 							</svg>
@@ -110,6 +110,7 @@
 					</div>
 				</div>
 			</div>
+
 		</header>
 
 		<main>
@@ -195,7 +196,9 @@
 					<h2 class="section-title">Our Team</h2>
 					<ul class="members-list list">
 						<li class="member">
-							<img src="./images/team-member-1.jpg" alt="Team member 1" width="264" height="260" />
+							<img src="./images/team-member-1.jpg" alt="Team member 1" 
+							width="264" height="260" 
+							srcset="./images/team-member-1.jpg 1x, ./images/team-member-1-2x.jpg 2x"/>
 							<div class="member-text">
 								<h3 class="team-member-name">Mark Guerrero</h3>
 								<p class="team-member-position">Product Designer</p>
@@ -232,7 +235,9 @@
 							</div>
 						</li>
 						<li class="member">
-							<img src="./images/team-member-2.jpg" alt="Team member 2" width="264" height="260" />
+							<img src="./images/team-member-2.jpg" alt="Team member 2" 
+							width="264" height="260" 
+							srcset="./images/team-member-2.jpg 1x, ./images/team-member-2-2x.jpg 2x"/>
 							<div class="member-text">
 								<h3 class="team-member-name">Tom Ford</h3>
 								<p class="team-member-position">Frontend Developer</p>
@@ -269,7 +274,9 @@
 							</div>
 						</li>
 						<li class="member">
-							<img src="./images/team-member-3.jpg" alt="Team member 3" width="264" height="260" />
+							<img src="./images/team-member-3.jpg" alt="Team member 3" 
+							width="264" height="260" 
+							srcset="./images/team-member-3.jpg 1x, ./images/team-member-3-2x.jpg 2x"/>
 							<div class="member-text">
 								<h3 class="team-member-name">Camila Garcia</h3>
 								<p class="team-member-position">Marketing</p>
@@ -306,7 +313,9 @@
 							</div>
 						</li>
 						<li class="member">
-							<img src="./images/team-member-4.jpg" alt="Team member 4" width="264" height="260" />
+							<img src="./images/team-member-4.jpg" alt="Team member 4" 
+							width="264" height="260" 
+							srcset="./images/team-member-4.jpg 1x, ./images/team-member-4-2x.jpg 2x"/>
 							<div class="member-text">
 								<h3 class="team-member-name">Daniel Wilson</h3>
 								<p class="team-member-position">UI Designer</p>
@@ -346,7 +355,7 @@
 				</div>
 			</section>
 
-			<section class="section">
+			<section class="customer-section section">
 				<div class="container">
 					<h2 class="section-title">Customers</h2>
 					<ul class="customers-list list">
@@ -510,5 +519,6 @@
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>
