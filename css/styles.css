@@ -265,7 +265,7 @@ header > .container {
 .menu-soc-list {
 	display: flex;
 	justify-content: center;
-	gap: 56px;
+	gap: 40px;
 }
 .menu-soc-item {
 	width: 40px;
@@ -306,7 +306,8 @@ header > .container {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	max-width: 428px;
+	/* max-width: 428px; */
+	max-width: 1440px;
 	height: 432px;
 	margin: 0 auto;
 }

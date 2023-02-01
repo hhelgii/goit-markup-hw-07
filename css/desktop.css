@@ -98,11 +98,13 @@
 	.caption {
 		font-size: 20px;
 		line-height: 1.2;
+		text-align: left;
 	}
 
 	.section-gadgets {
-		display: unset;
 		padding-top: 0;
+		display: flex;
+		
 	}
 
 	.gadgets-list {

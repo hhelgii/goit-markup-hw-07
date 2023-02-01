@@ -55,6 +55,10 @@
 	.contacts-link:focus {
 		color: #404bbf;
 	}
+	.current {
+		color: var(--primary-brand-color);
+	}
+
 	.mobile-menu {
 		display: none;
 	}
